@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btnPlusSize">50sp</dimen>
+    <dimen name="top">200sp</dimen>
+    <dimen name="top2">50sp</dimen>
+    <dimen name="size_minus">55sp</dimen>
+</resources>
