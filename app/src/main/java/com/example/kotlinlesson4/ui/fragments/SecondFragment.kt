@@ -17,7 +17,6 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
     private lateinit var binding: FragmentSecondBinding
     private lateinit var viewModel: MainViewModel
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +29,6 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-
 
         viewModel.counter.observe(viewLifecycleOwner, {
             binding.tvResult.text = it.toString()

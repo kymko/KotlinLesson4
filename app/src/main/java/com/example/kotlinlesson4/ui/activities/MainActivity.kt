@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val adapter = ViewPagerAdapter(fragments, this)
         binding.viewPager.adapter = adapter
     }
+
 }
 
 //Добавить ViewPager из 3 фрагментов в MainActivity

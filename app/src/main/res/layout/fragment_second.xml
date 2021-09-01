@@ -15,7 +15,7 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="@dimen/btnPlusSize"
-        android:text="12" />
+        tools:text="12" />
 
 
 </RelativeLayout>
