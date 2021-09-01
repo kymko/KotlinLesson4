@@ -4,4 +4,5 @@
     <dimen name="top">200sp</dimen>
     <dimen name="top2">50sp</dimen>
     <dimen name="size_minus">55sp</dimen>
+    <dimen name="plusCommand">64sp</dimen>
 </resources>

@@ -5,18 +5,24 @@ import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
 
-    private var mCounter = 0
+    var counter = MutableLiveData<Int>()
+    var commands = MutableLiveData<String>()
 
-    val counter = MutableLiveData<Int>()
+    private var mCounter = 0
+    private var plus = "+"
+    private var minus = "-"
 
     fun onIncrementClick() {
         mCounter++
+        commands.value = plus
         counter.value = mCounter
     }
 
     fun onItemDecrementClick() {
         mCounter--
+        commands.value = minus
         counter.value = mCounter
     }
 
 }
+

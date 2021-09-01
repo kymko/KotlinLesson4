@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.kotlinlesson4.MainViewModel
 import com.example.kotlinlesson4.R
 import com.example.kotlinlesson4.databinding.FragmentFirstBinding
-import kotlinx.android.synthetic.main.fragment_second.*
 
 class FirstFragment : Fragment(R.layout.fragment_first) {
 
@@ -28,21 +27,17 @@ class FirstFragment : Fragment(R.layout.fragment_first) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this@FirstFragment).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
 
-        binding.btnPlus.setOnClickListener{
+        binding.btnPlus.setOnClickListener {
             viewModel.onIncrementClick()
-            Log.d("tag","clicked")
+            Log.d("tag", "clicked")
         }
 
-        binding.btnMinus.setOnClickListener{
+        binding.btnMinus.setOnClickListener {
             viewModel.onItemDecrementClick()
         }
 
-        viewModel.counter.observe(viewLifecycleOwner,  {
-            binding.tvFirst.text = it.toString()
-            Log.d("tag", "plus:$tv_result")
-        })
     }
 
 }

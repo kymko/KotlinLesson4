@@ -3,15 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background = "#BA9BE6"
     tools:context=".ui.fragments.ThirdFragment">
 
     <TextView
         android:id="@+id/tv_commands"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/plus_commands"
         android:layout_centerInParent="true"
-        android:textSize="34sp"
+        android:textSize="@dimen/plusCommand"
         android:textColor="@color/black"
         android:textAlignment="center"
         />

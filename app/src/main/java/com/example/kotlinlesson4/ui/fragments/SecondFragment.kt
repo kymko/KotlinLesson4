@@ -22,23 +22,20 @@ class SecondFragment : Fragment(R.layout.fragment_second) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSecondBinding.inflate(inflater,container,false)
+        binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
 
 
-        viewModel.counter.observe(viewLifecycleOwner,  {
+        viewModel.counter.observe(viewLifecycleOwner, {
             binding.tvResult.text = it.toString()
             Log.d("tag", "plus:$tv_result")
         })
 
-        viewModel.counter.observe(viewLifecycleOwner,{
-            binding.tvResult.text = it.toString()
-        })
     }
 }
